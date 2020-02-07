@@ -21,7 +21,7 @@ public class Aquarium extends GFX {
 	/**
 	 * This is a static variable that tells us how wide the aquarium is.
 	 */
-	public static int WIDTH = 500;
+	public static int WIDTH = 500; 
 	/**
 	 * This is a static variable that tells us how tall the aquarium is.
 	 */
@@ -43,13 +43,30 @@ public class Aquarium extends GFX {
 
 	int fish1X = getWidth() + 100;
 	int fish2X = getWidth() + 300;
+	
+	Fish nemo = new Fish(Color.cyan, 250, 250, true, true);
+	
+	Fish marlin = new Fish(Color.orange, 100, 100, true, false);
+	
+	Fish nemo2 = new Fish(Color.cyan, 300, 300, false, true);
 
+	Fish marlin2 = new Fish(Color.cyan, 400, 400, false, false);
+	
 	@Override
 	public void draw(Graphics2D g) {
 		// Draw the "ocean" background.
 		g.setColor(Color.blue);
 		g.fillRect(0, 0, getWidth(), getHeight());
-
+		
+		nemo.draw(g);
+		
+		marlin.draw(g);
+		
+		nemo2.draw(g);
+		
+		marlin2.draw(g);
+		
+		
 		// Draw the fish!
 		DrawFish.facingLeft(g, Color.yellow, fish1X, 200);
 		// Draw the confused fish!
