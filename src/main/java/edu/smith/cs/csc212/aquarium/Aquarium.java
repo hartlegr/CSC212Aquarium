@@ -52,6 +52,8 @@ public class Aquarium extends GFX {
 
 	Fish marlin2 = new Fish(Color.cyan, 400, 400, false, false);
 	
+	Bubble bob = new Bubble(250, 200);
+	
 	@Override
 	public void draw(Graphics2D g) {
 		// Draw the "ocean" background.
@@ -65,6 +67,10 @@ public class Aquarium extends GFX {
 		nemo2.draw(g);
 		
 		marlin2.draw(g);
+		
+		bob.drawBubble(g);
+		
+		
 		
 		
 		// Draw the fish!
